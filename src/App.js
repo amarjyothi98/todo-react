@@ -21,7 +21,14 @@ const FILTER_MAP = {
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App(props) {
-  const [tasks, setTasks] = useState(props.tasks);
+
+  const tasking = [
+    { id: "todo-0", name: "Eat", completed: true },
+    { id: "todo-1", name: "Sleep", completed: false },
+    { id: "todo-2", name: "Repeat", completed: false },
+  ];
+
+  const [tasks, setTasks] = useState(tasking);
   const [filter, setFilter] = useState("All");
 
   function toggleTaskCompleted(id) {
